@@ -1,5 +1,24 @@
 
 
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+import seaborn as sns
+
+from sklearn.model_selection import train_test_split, cross_val_score, RandomizedSearchCV, GridSearchCV
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
+from sklearn.pipeline import Pipeline
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import SVC
+from sklearn.metrics import confusion_matrix, classification_report, roc_curve, roc_auc_score, accuracy_score
+from sklearn.linear_model import LogisticRegression, Ridge
+from sklearn.ensemble import GradientBoostingClassifier
+from imblearn.over_sampling import RandomOverSampler
+from collections import Counter
+
+
+
 
 def import_data():
     data = pd.read_csv("BankChurners.csv")
@@ -286,3 +305,5 @@ def linear_SVC(X, y):
               fontsize="22", fontfamily="sans-serif")
     plt.show()
 """
+
+def analysing_data_dictionaries_lists_and_API():
